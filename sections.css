@@ -1,0 +1,329 @@
+/* ==========================================================================
+   sections.css — cada seção da página, na ordem em que aparecem
+   No final do arquivo ficam os ajustes responsivos.
+   ========================================================================== */
+
+/* ---------- Texto corrido das seções ---------- */
+.about__text p,
+.moments__intro,
+.first-visit__text p,
+.contact__text p {
+  max-width: 42ch;
+  color: var(--color-soft);
+}
+
+/* ---------- 1. Hero ---------- */
+.hero {
+  padding: clamp(2rem, 5vw, 4.5rem) 0 var(--section-space);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.hero__lead {
+  max-width: 34ch;
+  margin: var(--space-3) 0 var(--space-3);
+  color: var(--color-soft);
+  font-size: 1.2rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.hero__photo img {
+  aspect-ratio: 4 / 5;
+  object-position: 50% 40%;
+}
+
+/* Horários: GC (sábado) e culto (domingo) sempre separados */
+.schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--color-line);
+}
+
+.schedule__item {
+  padding: var(--space-2) var(--space-2) 0 0;
+}
+
+.schedule__item + .schedule__item {
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--color-line);
+}
+
+.schedule__label {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.schedule .time {
+  margin-top: 0.2rem;
+}
+
+.schedule__place {
+  margin: 0.35rem 0 0;
+  color: var(--color-muted);
+  font-size: var(--fs-small);
+}
+
+/* ---------- 2. Sobre o GC ---------- */
+.about__grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.about__text h2 {
+  margin-bottom: var(--space-3);
+}
+
+.about__photo img {
+  aspect-ratio: 16 / 9;
+}
+
+.verse {
+  margin: var(--space-4) 0 0;
+  padding-left: var(--space-2);
+  border-left: 3px solid var(--color-foam);
+}
+
+.verse p {
+  margin: 0;
+  color: var(--color-cream);
+  font-size: 1.1rem;
+}
+
+.verse cite {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--color-muted);
+  font-size: var(--fs-small);
+  font-style: normal;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- 3. O que rola no GC ---------- */
+.moments__grid {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.moments__photo img {
+  aspect-ratio: 4 / 5;
+  object-position: 50% 55%;
+}
+
+.moments__text h2 {
+  margin-bottom: var(--space-2);
+}
+
+.moments__intro {
+  margin-bottom: var(--space-3);
+}
+
+.moments__list {
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.moments__list li {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--color-line);
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.moments__list li:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* ---------- 4. Para quem está chegando ---------- */
+.first-visit__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.first-visit__text h2 {
+  margin-bottom: var(--space-3);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.first-visit__text .btn {
+  margin-top: var(--space-2);
+}
+
+.when {
+  display: grid;
+  gap: 0;
+}
+
+.when__block {
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.when__block:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.when__name {
+  margin: 0;
+}
+
+.when .time {
+  margin: 0.15rem 0 0.3rem;
+}
+
+.when__note {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* ---------- 5. Contato ---------- */
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.contact__text h2 {
+  margin-bottom: var(--space-2);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.contact__logo {
+  justify-self: center;
+  width: min(100%, 340px);
+  mix-blend-mode: screen;
+}
+
+/* ---------- Rodapé ---------- */
+.site-footer {
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-size: var(--fs-small);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Responsivo
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width: 960px) {
+  .about__grid,
+  .moments__grid,
+  .first-visit__grid,
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .moments__photo {
+    order: 2;
+  }
+
+  .moments__photo img {
+    aspect-ratio: 4 / 3;
+    object-position: 50% 60%;
+  }
+
+  .contact__logo {
+    justify-self: start;
+    width: min(70%, 260px);
+  }
+}
+
+/* Celular grande e abaixo */
+@media (max-width: 720px) {
+  .site-nav ul {
+    display: none;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__photo img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .brand img {
+    height: 48px;
+  }
+
+  .hero {
+    padding-top: var(--space-3);
+  }
+
+  .hero__lead {
+    font-size: 1.1rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .schedule__item + .schedule__item {
+    padding-left: var(--space-2);
+  }
+
+  /* reserva duas linhas para que os horários fiquem alinhados */
+  .schedule__label {
+    min-height: 2.6em;
+    letter-spacing: 0.1em;
+  }
+
+  .contact__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
