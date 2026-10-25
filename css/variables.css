@@ -1,0 +1,44 @@
+/* ==========================================================================
+   variables.css — tokens do design (cores, fontes, espaços, medidas)
+   Para mudar a identidade do site, comece por aqui.
+   ========================================================================== */
+
+:root {
+  /* Cores (vindas da logo) */
+  --color-ink: #020a12;        /* fundo principal */
+  --color-night: #06141f;      /* fundo das seções alternadas */
+  --color-sea: #1f6fa3;        /* azul oceano */
+  --color-foam: #3d9bd6;       /* azul claro (destaques e links) */
+  --color-cream: #f1e9d8;      /* texto principal */
+  --color-muted: #a7bccb;      /* texto secundário */
+  --color-soft: #cfdce6;       /* texto corrido sobre fundo escuro */
+  --color-buoy: #ff5a1f;       /* laranja: usado somente em ações */
+  --color-line: rgba(241, 233, 216, 0.16);
+
+  /* Tipografia */
+  --font-display: "Big Shoulders Display", "Impact", "Arial Narrow", sans-serif;
+  --font-body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+
+  --fs-body: 1.0625rem;
+  --fs-small: 0.875rem;
+  --fs-h1: clamp(3.4rem, 9vw, 6.2rem);
+  --fs-h2: clamp(2.2rem, 4.8vw, 3.6rem);
+  --fs-h3: clamp(1.5rem, 2.6vw, 2rem);
+  --fs-time: clamp(2.6rem, 6vw, 4rem);
+
+  /* Espaços */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --section-space: clamp(4.5rem, 10vw, 8rem);
+
+  /* Medidas */
+  --container: 1160px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --radius-photo: 6px;
+  --header-height: 72px;
+
+  /* Movimento */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
